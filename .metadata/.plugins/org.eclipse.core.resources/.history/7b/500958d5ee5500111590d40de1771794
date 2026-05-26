@@ -1,0 +1,8 @@
+Feature:login feature of Face book page we need validate the login feature test scenarios
+Scenario:Validate the login feature with valid username and password
+Given user is on login page
+
+
+
+
+ 

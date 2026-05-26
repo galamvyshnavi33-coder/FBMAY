@@ -1,0 +1,39 @@
+package vyshnavi;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ProjectPractice {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver,chome,driver","D:\\selenium\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin123");
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		Thread.sleep(3000);
+
+		driver.findElement(By.xpath("//span[text()='Admin']")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//label[text()='Status']/following::div[contains(@class,'oxd-select-text oxd-select-text--active')][1]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("(//div[contains(text(),'Enabled')])[1]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//label[text()='Username']/following::input[1]")).sendKeys("admin");
+		Thread.sleep(3000);
+
+
+		
+
+
+	}
+
+}

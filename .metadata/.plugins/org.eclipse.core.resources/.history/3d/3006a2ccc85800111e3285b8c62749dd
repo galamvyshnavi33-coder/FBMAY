@@ -1,0 +1,22 @@
+package StepDefination;
+
+import static org.testng.AssertJUnit.assertEquals;
+import com.aventstack.extentreports.util.Assert;
+
+public class Program {
+	public static void login()
+	{
+		System.out.println("data");
+	}
+	public static void main(String[] args) 
+	{
+		String expectedresults="hello welcome to selenium";
+		String actualresults="hello welcome to selenium";
+	
+		Assert sa=new Assert();
+		//sa.assertEquals(actualresults,expectedresults,"both are not matching");
+		login();
+	}
+
+	
+}

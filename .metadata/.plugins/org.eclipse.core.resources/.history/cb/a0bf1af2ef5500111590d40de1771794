@@ -1,0 +1,15 @@
+package StepDefination;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class LoginC3 extends LoginpageC3
+{
+	@Given("user is on login page")
+	public static void useis_on_loginpage()throws InterruptedException
+	
+	
+
+}

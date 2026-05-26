@@ -1,0 +1,26 @@
+Feature:login feature of Face book page we need validate the login feature test scenarios
+Scenario:Validate the login feature with Valid username and password
+Given user is on login page
+When user enters valid username "Testing@gmail.com"
+And user enters valid password "P22332"
+And clicks on submit button
+Then user should be navigated to home page
+
+Scenario:Validate the login feature with inValid username and password
+Given user is on login page
+When user enters valid username "Testing@gmail.com"
+And user enters valid password "P22332"
+And clicks on submit button
+Then user should able to see the error message
+
+Scenario Outline:Validate the login functionality with valid username and password
+Given user is on login page
+When user enters valid username "<username>"
+And user enters valid password "<password>"
+And clicks on submit button
+
+
+
+
+
+ 

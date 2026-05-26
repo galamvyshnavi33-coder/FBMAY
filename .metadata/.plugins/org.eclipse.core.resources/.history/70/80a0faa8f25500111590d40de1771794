@@ -1,0 +1,29 @@
+package StepDefination;
+
+import Allpages.LoginpageC3;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class LoginC3 extends LoginpageC3
+{
+	@Given("user is on login page")
+	public static void useis_on_loginpage()throws InterruptedException
+	{
+		browserInitilization();
+	}
+	@When("user enters valid username{String}")
+	public static void userentersvalidusername(String emailid)
+	{
+		Enter_email(emailid);
+	}
+	@And("user clicks on valid password {String}")
+	public static void userclicksonvalidpassword(String password)
+	{
+		Enter_password(password);
+	}
+	
+	
+
+}

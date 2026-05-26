@@ -1,0 +1,11 @@
+package Allpages;
+
+import org.openqa.selenium.By;
+
+public class LoginpageC3 {
+	public static By emailid=By.name("email");
+	public static By passwordid=By.name("pass");
+	public static By login=By.xpath("//span[text()='Log in']");
+	
+
+}

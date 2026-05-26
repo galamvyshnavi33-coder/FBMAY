@@ -1,0 +1,8 @@
+Feature: Validate Facebook login functionality
+
+Scenario: Validate login with valid username and password
+
+Given user is on login page
+When user enters valid username "Testing@gmail.com"
+And user enters valid password "p22332"
+And clicks on submit button

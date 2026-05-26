@@ -1,0 +1,78 @@
+package StepDefination;
+
+
+import java.io.IOException;
+
+import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
+
+import Allpages.LoginpageC3;
+import GenericmethodP3.GenericmethodC3;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class LoginC3 extends LoginpageC3
+{   
+	@Given("user is on login page")
+	public static void userisonloginpage() throws InterruptedException, IOException
+	{
+		browserInitilization();
+		ExtentCucumberAdapter.addTestStepLog("application is luanched successfully");
+		ExtentCucumberAdapter.addTestStepScreenCaptureFromPath(GenericmethodC3.captureScreenshot());
+	
+	}
+	@When("user enters valid username {string}")
+	public static void userentersvalidusername(String emailid) throws IOException
+	{
+		Enter_email(emailid);
+		ExtentCucumberAdapter.addTestStepLog("user is able entered username"+emailid);
+		ExtentCucumberAdapter.addTestStepScreenCaptureFromPath(GenericmethodC3.captureScreenshot());
+		
+	}
+	@Given("user enters valid usernameM \"([^\"]*)\"$")
+	public static void userentersvalidusernameM(String emailid) throws IOException
+	{
+		Enter_email(emailid);
+		ExtentCucumberAdapter.addTestStepLog("user is able entered username"+emailid);
+		ExtentCucumberAdapter.addTestStepScreenCaptureFromPath(GenericmethodC3.captureScreenshot());
+		
+	}
+	@When("user enters valid passwordM \"([^\"]*)\"$")
+	public static void userentersvalidpasswordM(String password) throws IOException
+	{
+		Enter_password(password);
+		ExtentCucumberAdapter.addTestStepLog("user is able entered password"+password);
+		ExtentCucumberAdapter.addTestStepScreenCaptureFromPath(GenericmethodC3.captureScreenshot());
+	}
+	@And("user enters valid password {string}")
+	public static void userentersvalidpassword(String password) throws IOException
+	{
+		Enter_password(password);
+		ExtentCucumberAdapter.addTestStepLog("user is able entered password"+password);
+		ExtentCucumberAdapter.addTestStepScreenCaptureFromPath(GenericmethodC3.captureScreenshot());
+	}
+	@Then("user should be able to see error message")
+	public static void usershouldbeabletoseeerrormessage()
+	{
+		if(usershouldbeabletoseeerror().equals("The passwoprd you've entered is incorrect"))
+		{
+			System.out.print("pass");
+			System.out.print(usershouldbeabletoseeerror());
+			
+		}
+		else
+		{
+			System.out.print("fail");
+			System.out.print(usershouldbeabletoseeerror());
+		}
+	}
+	@And("clicks on submit button")
+	public static void clicksonsubmitbutton() throws IOException, InterruptedException
+	{
+		buttonlogin();
+		ExtentCucumberAdapter.addTestStepLog("user is able to click on submit button");
+		ExtentCucumberAdapter.addTestStepScreenCaptureFromPath(GenericmethodC3.captureScreenshot());
+	}
+}
+

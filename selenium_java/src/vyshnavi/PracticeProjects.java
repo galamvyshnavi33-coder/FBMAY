@@ -1,0 +1,44 @@
+package vyshnavi;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class PracticeProjects {
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "D:\\selenium\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+		driver.get("https://demoqa.com/text-box?utm_source=chatgpt.com");
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+		System.out.println(driver.getTitle());
+		System.out.println(driver.getCurrentUrl());
+		driver.findElement(By.id("userName")).sendKeys("vyshnavigalam");
+		Thread.sleep(3000);
+		driver.findElement(By.id("userName")).clear();
+		driver.findElement(By.id("userName")).sendKeys("vyshnavigalamyadav");
+		Thread.sleep(3000);
+		driver.findElement(By.id("userEmail")).sendKeys("galamvyshnavi33@gmail.com");
+		Thread.sleep(3000);
+		driver.findElement(By.id("currentAddress")).sendKeys("kphb,telangana,hyderabad");
+		Thread.sleep(3000);
+		driver.findElement(By.id("permanentAddress")).sendKeys("nellore,andhrapradesh");
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//button[text()='Submit']")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//span[text()='Check Box']")).click();
+		Thread.sleep(3000);
+		driver.navigate().to("https://practice.expandtesting.com/checkboxes?utm_source=chatgpt.com");
+		Thread.sleep(3000);
+//		boolean status = driver.findElement(By.xpath("//input[@id='checkbox2']")).isSelected();
+//		System.out.println(status);
+//		driver.findElement(By.xpath("//input[@id='checkbox2']")).click();	
+		boolean status = driver.findElement(By.xpath("//input[@id='checkbox1']")).isDisplayed();
+		System.out.println(status);
+		driver.findElement(By.xpath("//input[@id='checkbox1']")).click();	
+	}
+
+}

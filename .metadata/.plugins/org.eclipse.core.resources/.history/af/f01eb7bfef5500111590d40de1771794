@@ -1,0 +1,55 @@
+package StepDefination;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class LoginC3 extends LoginpageC3{
+	@Given("user is on login page")
+	public static void useris_on_loginpage()throws InterruptedException
+	{
+	
+	}
+	@When("user enters valid username{string}")
+	public static void userentersvalidusername(String emailid) 
+	{
+		
+	}
+	@When("user enters valid usernameM \"([^\"]*)\"$")
+	public static void userentersvalidusernameM(String emailid)
+	{
+	
+	}
+	@When("user enters valid passwordM \"(^\"]*)\"$")
+	public static void userentersvalidpasswordM(String password)
+	{
+		
+	}
+	@And("user enters valid password {String}")
+	public static void userentersvalid_password(String password)
+	{
+		
+	}
+	@And("clicks on submit button")
+	public static void clicksonsubmitbutton()throws InterruptedException
+	{
+		
+	}
+	@Then("user should able to see the error message")
+	public static void usershouldabletoseetheerrormessage()
+	{
+		
+	}
+
+
+
+
+
+
+
+
+	
+
+
+}

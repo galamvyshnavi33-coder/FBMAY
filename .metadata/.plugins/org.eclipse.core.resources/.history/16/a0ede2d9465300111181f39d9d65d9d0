@@ -1,0 +1,22 @@
+package PracticeJava;
+
+public class Variables {
+	static String name="vyshnavi";
+	int age=24;
+	int height=4;
+	static boolean grade=true;
+	int weight=56;
+	public static void main(String[] args) {
+		int age1=30;
+		
+		Variables v=new Variables();
+		System.out.println(v.age);
+		System.out.println(name);
+		System.out.println(v.age);
+		System.out.println(v.height);
+		System.out.println(grade);
+		System.out.println(v.weight);
+
+	}
+
+}

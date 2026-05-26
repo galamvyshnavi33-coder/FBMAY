@@ -1,0 +1,22 @@
+package StepDefination;
+
+import io.cucumber.java.en.Given;
+
+public class LoginC3 {
+	@Given("user is on login page")
+	public static void useris_on_loginpage()throws InterruptedException
+	{
+	
+	}
+	@When("user enters valid username{string}")
+	public static void userentersvalidusername(String emailid) 
+	{
+		
+	}
+	@And("user enters valid password{
+
+
+	
+
+
+}

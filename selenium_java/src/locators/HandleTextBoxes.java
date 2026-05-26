@@ -1,0 +1,35 @@
+package locators;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class HandleTextBoxes {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "D:\\selenium\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://github.com/login");
+		Thread.sleep(3000);
+		WebElement usernameTxt = driver.findElement(By.id("login_field"));
+		if(usernameTxt.isDisplayed())
+		{
+			if(usernameTxt.isEnabled())
+			{
+			
+				usernameTxt.sendKeys("hyr");
+				String enteredTxt=usernameTxt.getAttribute("tutorials");
+				Thread.sleep(3000);
+      			usernameTxt.clear();
+			}
+			else
+				System.out.println("username textbox is not enabled");
+		}
+		else
+			System.out.println("username textbox is not displayed");
+		driver.close();
+	}
+}
+
